@@ -1,18 +1,38 @@
+
+
+
+
 var cards = ['queen', 'queen', 'king', 'king'];
 var cardsInPlay = [];
-var cardOne = cards[0];
-var cardTwo = cards[2];
 
+var checkForMatch = function() { 
+};
 
-cardsInPlay.push(cardOne);
-console.log("User flipped" + " " + cardOne); 
+var flipCard = function(cardId) {
 
-cardsInPlay.push(cardTwo);
-console.log("User flipped" + " " + cardTwo); 
+console.log("User flipped " + cards[cardId]);
+cardsInPlay.push(cards[cardId]);
 
+checkForMatch();
 
-if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-	window.alert("You found a match!");
+if (cardsInPlay[0] === cardsInPlay[1]) {
+	alert("You found a match!");
 } else {
-	window.alert("Sorry, try again.");
+	alert("Sorry, try again.");
 }
+
+}; 
+
+flipCard(0);
+flipCard(2);
+
+
+// function that stores steps related to selecting or flipping a card
+// add the card selected to the aray when it has been flipped - if it matches the other card, then that's a match
+
+
+//group logic to check if two cards match- giv euser feed back so they know 
+
+
+
+
